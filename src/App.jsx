@@ -42,8 +42,45 @@ function Home() {
       </aside>
         <HowItWorks />
         <Testimonials />
-      <footer>
-        <div>Copyright 2026 Swift. All rights reserved.</div>
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <div className="footer-brand">
+            <div className="footer-logo">S</div>
+            <div>
+              <div className="footer-title">SWIFT</div>
+              <div className="footer-tag">Find trusted local workers</div>
+            </div>
+          </div>
+
+          <nav className="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/about-us">About</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/contact-us">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div className="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/help">Help Center</a></li>
+              <li><a href="/privacy">Privacy</a></li>
+              <li><a href="/terms">Terms</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Follow</h4>
+            <div className="socials">
+              <a aria-label="Twitter" href="#">Twitter</a>
+              <a aria-label="Facebook" href="#">Facebook</a>
+              <a aria-label="Instagram" href="#">Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-legal">© 2026 Swift. All rights reserved.</div>
       </footer>
     </>
   )
