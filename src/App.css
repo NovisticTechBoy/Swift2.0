@@ -1,0 +1,312 @@
+body {
+  background-color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  padding-left: 11rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-items {
+display: flex;
+gap: 2rem;
+list-style: none;
+text-decoration: none;
+}
+
+.navbar-items a {
+  text-decoration: none;
+  color: inherit;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+.navbar-items a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.auth-buttons {
+display: flex;
+gap: 1rem;
+margin-left: auto;
+}
+
+.auth-login {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #000;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.auth-login:hover{
+  transform: scale(1.05);
+}
+.auth-signup{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: purple;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.auth-signup:hover{
+  transform: scale(1.07);
+}
+.intro-line {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 7px;
+  color: white;
+  background-color: rgb(199, 49, 199);
+font-size: 15px;
+width: 20%;
+}
+.Intro p{
+  font-size: 50px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 25px;
+}
+.Intro h2{
+  font-size: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', sans-serif
+}
+.Intro h3{
+  font-size: 15px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.work {
+  display: flex;
+  justify-content: left;
+  gap: 2rem;
+}
+.find-work {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgb(236, 234, 236);
+  color: black;
+ font-family: 'Inter',system-ui, sans-serif;
+  border-radius: 10px;
+  transition:cubic-bezier(1, 0, 0, 1) 0.4s;
+  padding: 0.5rem 1rem;
+   border: 2px solid rgb(90, 8, 90);
+}
+.find-work:hover{
+  transform: scale(1.04);
+}
+.i-work{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgb(90, 8, 90);
+  color: white;
+  font-family: 'Inter',system-ui, sans-serif;
+  border-radius: 10px;
+  transition:cubic-bezier(1, 0, 0, 1) 0.4s;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(90, 8, 90);
+}
+.i-work:hover{
+  transform: scale(1.04);
+}
+.image-container{
+  width: 100%;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  gap: 1rem;
+  overflow: hidden;
+  align-items: center;
+  
+}
+
+.image-container img {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.99);
+  transition: opacity 520ms cubic-bezier(.2,.8,.2,1), transform 520ms cubic-bezier(.2,.8,.2,1);
+  will-change: opacity, transform;
+}
+.reveal.revealed { 
+  opacity: 1; 
+  transform: translateY(0) scale(1);
+ }
+.reveal[data-delay] {
+   transition-delay: var(--delay, 0ms); 
+  }
+
+
+.reveal img {
+   width: 100%; 
+   height: 200px; 
+   object-fit: cover; 
+   border-radius: 12px;
+    display: block
+   }
+.reveal p {
+   margin-top:8px;
+    color:#111;
+     font-size:14px ;
+    }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.revealed { 
+    transition: none; 
+    transform: none;
+     opacity: 1 }
+}
+
+/* Auth pages styles (login / signup) */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,#5e2fd6 0%, #8f4bd6 45%, #c084f5 100%);
+  padding: 40px 24px;
+}
+
+.auth-card {
+  width: 420px;
+  max-width: 96%;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  padding: 28px;
+  backdrop-filter: blur(6px);
+}
+
+.auth-brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom: 6px;
+}
+.auth-logo {
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#6b21a8;
+}
+.auth-card h2 {
+  margin:6px 0 14px 0;
+  font-size:26px;
+  text-align:left;
+  color:#0f172a;
+   font-family: 'Inter',system-ui, sans-serif;
+}
+
+.auth-form { 
+  display:flex;
+   flex-direction:column;
+    gap:12px }
+
+.auth-form input[type="email"],
+ .auth-form input[type="password"], 
+ .auth-form input[type="text"] {
+  padding:14px 16px;
+   border-radius: 10px; 
+   border:1px solid #e6e6ee; 
+   font-size:14px;
+    outline:none;
+}
+.auth-row { 
+  display:flex;
+   align-items:center; 
+   justify-content: space-between; 
+   margin-top:6px;
+   }
+
+.remember { 
+  display: flex; 
+  align-items:center;
+   gap:8px;
+   }
+
+.remember input{
+   width:16px;
+    height:16px
+   }
+.forgot {
+   color:#6b21a8; 
+   text-decoration:none; 
+   font-size:14px ;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+.primary-btn {
+  margin-top:14px;
+   padding:12px 18px; 
+   border-radius:12px; 
+   border:none;
+    cursor:pointer; 
+    color:white; 
+    font-weight:600;
+     background: linear-gradient(90deg,#6b21a8,#8b5cf6); 
+     box-shadow: 0 6px 18px rgba(107,33,168,0.28);
+}
+
+.divider { 
+  display:flex; 
+  align-items:center; 
+  gap:12px;
+   margin:18px 0;
+   color:#9ca3af 
+  }
+
+.divider::before, .divider::after { 
+  content:'';
+   flex:1; 
+   height:1px; 
+   background:rgba(15,23,42,0.06)
+   }
+
+.social-row {
+   display:flex; 
+   gap:12px
+   }
+.social-btn { 
+  flex:1; 
+  padding:10px;
+   border-radius:10px;
+    background:#fff;
+     border:1px solid rgba(0,0,0,0.06); 
+     display:flex; 
+     align-items:center;
+      justify-content: center; 
+      gap:8px; 
+      cursor:pointer }
+
+@media (max-width:480px){
+  .auth-card{ padding:20px }
+  .auth-card h2{ font-size:22px }
+}

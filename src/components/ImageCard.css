@@ -1,0 +1,19 @@
+/* Minimal ImageCard styles — core reveal handled in App.css */
+.article {
+     display: block
+     }
+
+.reveal {
+     width: 320px;
+      max-width: 100%; 
+    }
+
+@media (max-width:600px){
+  .reveal img { 
+    height: 160px 
+}
+}
+
+.image-card-text{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}

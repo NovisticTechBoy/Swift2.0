@@ -1,0 +1,48 @@
+.how-section { 
+    padding: 48px 20px;
+ }
+.how-inner {
+     max-width: 1100px;
+      margin: 0 auto; 
+    }
+.how-section h2 {
+     text-align:center; 
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     margin-bottom:18px
+     }
+.how-grid { 
+    display:grid;
+     grid-template-columns: repeat(3,1fr); 
+     gap:18px; 
+     margin-top:18px ;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+.how-card { 
+    background: #fff;
+     padding:18px;
+      border-radius:12px;
+       box-shadow: 0 8px 20px rgba(16,24,40,0.06);
+        text-align:left
+     }
+.how-icon { 
+    width:56px;
+     height:56px; display:flex; 
+     align-items:center; 
+     justify-content:center; 
+     border-radius:10px;
+      background:linear-gradient(180deg,#fff,#f3f0ff);
+       margin-bottom:8px 
+    }
+.how-card h3 { 
+    margin:6px 0 
+}
+.how-card p {
+     color:#374151;
+      font-size:14px
+     }
+
+@media (max-width:900px){ 
+    .how-grid { 
+        grid-template-columns: 1fr;
+     }
+     }

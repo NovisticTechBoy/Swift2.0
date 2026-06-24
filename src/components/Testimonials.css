@@ -1,0 +1,47 @@
+.testimonials {
+     padding: 36px 16px;
+      background: linear-gradient(180deg, rgba(245,246,250,0.6), rgba(255,255,255,0.6)); 
+    }
+.test-inner {
+     max-width:900px; 
+     margin:0 auto;
+     }
+     .test-inner h3{
+          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+     }
+.test-slider { 
+    position:relative; 
+     min-height:140px;
+     overflow:hidden 
+    }
+.test-slide {
+     position:absolute;
+     left:0;
+     top:0;
+     width:100%;
+     opacity:0;
+     transform: translateY(6px);
+     transition: opacity 400ms ease, transform 400ms ease;
+     z-index:0;
+}
+.test-slide.active {
+     opacity:1;
+     transform:none;
+     z-index:2;
+ }
+.test-card {
+     background:#fff;
+      border-radius:12px;
+       padding:18px; 
+       box-shadow:0 6px 18px rgba(16,24,40,0.06)
+     }
+.test-card blockquote {
+     margin:0; 
+    font-style:italic
+ }
+
+.test-author { 
+    margin-top:8px; 
+    font-weight:600; 
+    color:#111;
+ }
