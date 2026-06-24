@@ -310,3 +310,55 @@ width: 20%;
   .auth-card{ padding:20px }
   .auth-card h2{ font-size:22px }
 }
+/* Mobile / Responsive adjustments */
+@media (max-width: 900px) {
+  nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar-items {
+    gap: 12px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .auth-buttons {
+    gap: 8px;
+  }
+
+  .intro-line {
+    font-size: 1.25rem;
+    width: auto;
+  }
+
+  .Intro p {
+    font-size: 1rem;
+  }
+
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 18px;
+  }
+
+  .image-container .reveal {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .how-inner, .test-inner { 
+    padding: 0 12px 
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-line { font-size: 1rem }
+  .Intro p { font-size: 0.95rem }
+  .find-work, .i-work { padding: 0.4rem 0.6rem; font-size: 14px }
+  .auth-card { width: 94%; padding: 16px }
+  .how-grid { gap: 12px }
+  .how-icon { width:48px; height:48px }
+  .reveal img { height: 160px }
+}
