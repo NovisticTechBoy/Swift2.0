@@ -463,6 +463,18 @@ width: 20%;
   .reveal img { height: 160px }
 }
 
+/* Mobile Font Styling (Poppins for mobile views) */
+@media (max-width: 768px) {
+  .Intro p,
+  .Intro h2,
+  .Intro h3,
+  .navbar-items a,
+  .auth-login,
+  .auth-signup {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
 /* Footer styles */
 .site-footer {
   width: 100%;
