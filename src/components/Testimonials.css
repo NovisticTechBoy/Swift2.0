@@ -45,3 +45,10 @@
     font-weight:600; 
     color:#111;
  }
+
+/* Mobile Font Styling */
+@media (max-width: 768px) {
+  .test-inner h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
