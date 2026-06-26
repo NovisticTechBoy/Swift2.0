@@ -1,6 +1,7 @@
 /* Minimal ImageCard styles — core reveal handled in App.css */
 .article {
      display: block
+    
      }
 
 .reveal {
@@ -12,6 +13,13 @@
   .reveal img { 
     height: 160px 
 }
+}
+
+/* Mobile Font Styling */
+@media (max-width: 768px) {
+  .image-card-text {
+    font-family: 'Poppins', sans-serif;
+  }
 }
 
 .image-card-text{
