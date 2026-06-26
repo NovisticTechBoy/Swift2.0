@@ -180,6 +180,78 @@ width: 20%;
      opacity: 1 }
 }
 
+/* User Type Selector Cards */
+.user-type-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.user-type-card {
+  padding: 18px;
+  border: 2px solid #e6e6ee;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 300ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+}
+
+.user-type-card:hover {
+  border-color: #8b5cf6;
+  background: #faf8ff;
+}
+
+.user-type-card.selected {
+  border-color: #6b21a8;
+  background: linear-gradient(135deg, #f3f0ff 0%, #faf8ff 100%);
+  box-shadow: 0 4px 12px rgba(107, 33, 168, 0.15);
+}
+
+.user-type-card svg {
+  color: #6b21a8;
+}
+
+.user-type-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.user-type-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .user-type-selector {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .user-type-card {
+    padding: 14px;
+  }
+
+  .user-type-card h3 {
+    font-size: 14px;
+  }
+
+  .user-type-card p {
+    font-size: 12px;
+  }
+}
+
 /* Auth pages styles (login / signup) */
 .auth-page {
   min-height: 100vh;
