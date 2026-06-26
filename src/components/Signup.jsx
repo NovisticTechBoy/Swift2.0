@@ -5,6 +5,7 @@ import { AtSign } from 'lucide-react';
 import { UserRoundKey } from 'lucide-react'
 import { SavePen } from 'lucide-react'
 import { UserRoundPlus } from 'lucide-react'
+import { Briefcase, Hammer } from 'lucide-react'
 
 
 function Signup() {
@@ -16,6 +17,7 @@ function Signup() {
         password: '',
     })
 
+    const [userType, setUserType] = useState('')
     const [error, setErrorMessage] = useState('')
     const [loading, setLoading] = useState(false)
 
@@ -68,6 +70,11 @@ function Signup() {
 
         if (password.length < 8 || password.length > 24) {
             setErrorMessage('Password must be between 8 and 24 characters long.')
+            return
+        }
+
+        if (!userType) {
+            setErrorMessage('Please select if you are a Hirer or Worker.')
             return
         }
 
@@ -135,6 +142,33 @@ function Signup() {
                             <UserRoundKey size={16} />
                         </span>
                     </div>
+
+                <div className="user-type-selector">
+                    <div 
+                        className={`user-type-card ${userType === 'hirer' ? 'selected' : ''}`}
+                        onClick={() => {
+                            setUserType('hirer')
+                            if (error) setErrorMessage('')
+                        }}
+                    >
+                        <Briefcase size={32} />
+                        <h3>HIRER</h3>
+                        <p>Find skilled workers..</p>
+                    </div>
+
+                    <div 
+                        className={`user-type-card ${userType === 'worker' ? 'selected' : ''}`}
+                        onClick={() => {
+                            setUserType('worker')
+                            if (error) setErrorMessage('')
+                        }}
+                    >
+                        <Hammer size={32} />
+                        <h3>WORKER</h3>
+                        <p>Offer your services..</p>
+                    </div>
+                </div>
+
 
                     <div className="auth-row">
                         <div />
