@@ -233,17 +233,42 @@ width: 20%;
 .auth-form input[type="email"],
  .auth-form input[type="password"], 
  .auth-form input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
   padding:14px 16px;
    border-radius: 10px; 
    border:1px solid #e6e6ee; 
    font-size:14px;
     outline:none;
 }
+
+.auth-input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.auth-input-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b21a8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.auth-input-wrap input {
+  padding-right: 42px;
+}
 .auth-row { 
   display:flex;
    align-items:center; 
    justify-content: space-between; 
    margin-top:6px;
+   gap: 8px;
+   flex-wrap: wrap;
    }
 
 .remember { 
@@ -256,6 +281,25 @@ width: 20%;
    width:16px;
     height:16px
    }
+.auth-error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.auth-hint {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.primary-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
 .forgot {
    color:#6b21a8; 
    text-decoration:none; 
@@ -271,6 +315,10 @@ width: 20%;
     cursor:pointer; 
     color:white; 
     font-weight:600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
      background: linear-gradient(90deg,#6b21a8,#8b5cf6); 
      box-shadow: 0 6px 18px rgba(107,33,168,0.28);
 }
@@ -309,6 +357,9 @@ width: 20%;
 @media (max-width:480px){
   .auth-card{ padding:20px }
   .auth-card h2{ font-size:22px }
+  .auth-row { flex-direction: column; align-items: flex-start; }
+  .auth-input-icon { right: 10px; }
+  .primary-btn { width: 100%; }
 }
 
 /* Mobile Responsive adjustments */
