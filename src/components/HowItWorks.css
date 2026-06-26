@@ -46,3 +46,11 @@
         grid-template-columns: 1fr;
      }
      }
+
+/* Mobile Font Styling */
+@media (max-width: 768px) {
+  .how-section h2,
+  .how-grid {
+    font-family: 'Poppins', sans-serif;
+  }
+}
